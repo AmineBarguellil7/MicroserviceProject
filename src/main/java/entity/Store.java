@@ -21,8 +21,9 @@ public class Store {
     private Long id;
 
     private String name;
+    private String description;
     private String location;
-    private String phoneNumber;
-    private String productCategory;
+    private int phoneNumber;
+    private ProductCategory productCategory;
 
 }
