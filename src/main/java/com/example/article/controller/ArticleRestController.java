@@ -46,6 +46,11 @@ public class ArticleRestController {
 
 
 
+    @GetMapping("/hello")
+    public void display () {
+        System.out.println("Hello");
+    }
+
 
 
 
