@@ -21,6 +21,7 @@ public class Store {
     private String description;
     private String location;
     private int phoneNumber;
+    @Enumerated(EnumType.STRING)
     private ProductCategory productCategory;
 }
 
