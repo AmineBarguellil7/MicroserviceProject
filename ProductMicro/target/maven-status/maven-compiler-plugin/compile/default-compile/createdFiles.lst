@@ -1,0 +1,6 @@
+com\example\productmicro\repositories\IProductRepository.class
+com\example\productmicro\services\ProductService.class
+com\example\productmicro\ProductMicroApplication.class
+com\example\productmicro\entities\Product.class
+com\example\productmicro\services\IProductService.class
+com\example\productmicro\controllers\ProductController.class
