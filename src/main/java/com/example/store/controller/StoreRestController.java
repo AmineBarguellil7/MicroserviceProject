@@ -13,7 +13,7 @@ public class StoreRestController {
     StoreRepository storeRepo;
 
 
-    @PostMapping("/addStore")
+    @PostMapping("")
     public Store addStore(@RequestBody Store store) {
         return storeRepo.save(store);
     }
