@@ -1,7 +1,8 @@
 package com.example.avis.controller;
 
 import com.example.avis.entity.Avis;
-import com.example.avis.service.IAvisService;
+import com.example.avis.Service.IAvisService;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,10 +10,11 @@ import java.util.List;
 
 //@CrossOrigin
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/avis")
 public class AvisController {
 
-    private IAvisService avisService;
+    private  final IAvisService avisService;
 
     @PostMapping("/add")
     Avis addAvis(@RequestBody Avis avis){

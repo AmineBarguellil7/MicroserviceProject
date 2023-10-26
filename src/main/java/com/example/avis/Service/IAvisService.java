@@ -1,4 +1,4 @@
-package com.example.avis.service;
+package com.example.avis.Service;
 
 import com.example.avis.entity.Avis;
 

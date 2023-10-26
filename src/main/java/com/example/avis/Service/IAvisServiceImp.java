@@ -1,4 +1,4 @@
-package com.example.avis.service;
+package com.example.avis.Service;
 
 import com.example.avis.entity.Avis;
 import com.example.avis.repos.AvisRepository;
@@ -13,7 +13,7 @@ public class IAvisServiceImp implements IAvisService{
 
 
 
-    private  AvisRepository avisRepository;
+    private  final AvisRepository avisRepository;
 
     @Override
     public Avis addAvis(Avis a){

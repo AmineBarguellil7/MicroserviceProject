@@ -13,10 +13,5 @@ public class AvisApplication {
 	}
 
 
-	@Bean
-	ApplicationRunner init() {
-		return (args) -> {
-			System.out.println("Hello man");
-		};
-	}
+
 }
