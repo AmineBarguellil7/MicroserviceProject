@@ -13,7 +13,7 @@ public class IAvisServiceImp implements IAvisService{
 
 
 
-    private  final AvisRepository avisRepository;
+    private  AvisRepository avisRepository;
 
     @Override
     public Avis addAvis(Avis a){
