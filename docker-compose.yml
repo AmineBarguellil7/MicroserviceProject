@@ -1,10 +1,18 @@
 version: "3.8"
 services:
   discovery:
-    build: ../Eureka Server
+    build: ../MicroserviceProject/Eureka Server
     ports:
       - "8761:8761"
     image: "discovery-service"
+
+  gateway:
+    build: ../MicroserviceProject/gateway
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+    ports:
+      - "8030:8090"
+    image: "gateway"
 
   article:
     build: .
@@ -13,4 +21,56 @@ services:
     ports:
       - "8020:8082"
     image: "article-app"
+
+  order:
+    build: ../Projet-Jme3a/MicroserviceProject-yosri
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+    ports:
+      - "8021:8083"
+    image: "order-app"
+
+  avis:
+    build: ../Projet-Jme3a/avis
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+    ports:
+      - "8022:8084"
+    image: "avis-app"
+
+  event:
+    build: ../Projet-Jme3a/MicroserviceProject-Ones
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+    ports:
+      - "8023:8085"
+    image: "event-app"
+
+  produit:
+    build: ../Projet-Jme3a/produit
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+    ports:
+      - "8024:8086"
+    image: "produit-app"
+
+
+  store:
+    build: ../Projet-Jme3a/store
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+    ports:
+      - "8025:8087"
+    image: "store-app"
+
+
+
+
+
+
+
+
+
+
+
 

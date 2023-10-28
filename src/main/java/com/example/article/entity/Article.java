@@ -19,7 +19,7 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String titre,contenu,auteur;
+    private String titreArticle,contenu,auteur;
 
     @Temporal(TemporalType.DATE)
     private Date datePublication;
@@ -29,7 +29,7 @@ public class Article {
     public String toString() {
         return "Article{" +
                 "id=" + id +
-                ", titre='" + titre + '\'' +
+                ", titre='" + titreArticle + '\'' +
                 ", contenu='" + contenu + '\'' +
                 ", datePublication='" + datePublication + '\'' +
                 ", auteur='" + auteur + '\'' +
