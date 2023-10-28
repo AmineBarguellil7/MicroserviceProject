@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/order")
+@CrossOrigin(origins = "http://localhost:4200")
 public class OrderRestController {
 
     @Autowired
